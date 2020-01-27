@@ -11,7 +11,6 @@ object ChapterTwo {
 			mylist match {
 				case Array() => true
 				case Array(_) => true
-				case Array(x, y) if ordered(x,y) => true
 				case Array(x, y, _*) if ordered(x,y) => loop(mylist.tail)
 				case _ => false
 			}
@@ -49,6 +48,7 @@ object ChapterTwo {
 
 	def main(args: Array[String]): Unit = {
 		println(isSorted(Array(1,4,3,4,5), (x:Int, y:Int) => (x < y)))
+		println(isSorted(Array(1,0), (x:Int, y:Int) => (x < y)))
 		println(isSorted(Array("111", "212", "313", "414"), (x:String, y:String) => (x.toInt < y.toInt)))
 
 		println(curry((x: Int, y: Int) => x + y)(3)(5))
