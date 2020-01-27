@@ -28,6 +28,16 @@ object ChapterThree {
     case _ => l
   }
 
+  // Exercise 3.6
+  
+
+
+
+  /* Exercise 3.9 */
+  def length[A](as: List[A]): Int = {
+    as.foldRight(0)((a: A , b: Int) => 1 + b)
+  }
+
   def main(args: Array[String]): Unit = {
     /*
       Exercise 3.1 - it's the second to last one, so the sum of elements
@@ -46,5 +56,11 @@ object ChapterThree {
     println(ChapterThree.dropWhile(List(1,3,3,4,5,6), (x: Int) => (x % 2 == 1)))
 
     // 3.6
+
+    // Exercise 3.7
+    // No because the function itself cannot break out of foldRight
+
+    // 3.9
+    println(ChapterThree.length(List(1,2,3,4)))
   }
 }
