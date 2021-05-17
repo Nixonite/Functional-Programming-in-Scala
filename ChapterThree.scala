@@ -140,9 +140,9 @@ object List {
   }
 
   // 3.19
-  def filter[A](as: List[A])(f: A => Boolean): List[A] = {
+  // def filter[A](as: List[A])(f: A => Boolean): List[A] = {
     
-  }
+  // }
 
   def verify[A](a: A, b: A): Unit = {
     println(a, b, a == b)
